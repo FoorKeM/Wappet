@@ -9,12 +9,20 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/veterinarias"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="Veterinarias" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/mascotaextraviada"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:title="Mascota Extraviada" />
+        <item
+            android:id="@+id/adoptar2"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Adoptar Mascota" />
+        <item
+            android:id="@+id/editar"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Editar Publicacion" />
     </group>
 </menu>
