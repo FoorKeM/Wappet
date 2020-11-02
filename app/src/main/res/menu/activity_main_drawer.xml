@@ -24,5 +24,9 @@
             android:id="@+id/editar"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Editar Publicacion" />
+        <item
+            android:id="@+id/mapsFragment"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Mapa Veterinarias" />
     </group>
 </menu>
