@@ -1,9 +1,11 @@
 package com.asignatura.wappet;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 
+import com.asignatura.wappet.ui.db.DbHelper;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -15,6 +17,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import android.database.sqlite.SQLiteDatabase;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,6 +48,16 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        // inicializacion de la db
+
+        DbHelper dbHelper = new DbHelper(this);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if (db != null) {
+            // Insert con execSQL
+            db.execSQL("INSERT INTO veterinarias (nombre, descripcion, latitud, longitud) VALUES ('Blanco y violeta','veterinaria especializada en la atencion de caninos funciona las 24 hrs', '-29.921759', '-71.235805')");
+        }
+
     }
 
     @Override
