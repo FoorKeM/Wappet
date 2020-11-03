@@ -21,6 +21,10 @@
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Adoptar Mascota" />
         <item
+            android:id="@+id/registrar2"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Registrar Mascota" />
+        <item
             android:id="@+id/editar"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="Editar Publicacion" />
