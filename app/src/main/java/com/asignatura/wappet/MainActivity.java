@@ -48,16 +48,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-
-        // inicializacion de la db
-
-        DbHelper dbHelper = new DbHelper(this);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        if (db != null) {
-            // Insert con execSQL
-            db.execSQL("INSERT INTO veterinarias (nombre, descripcion, latitud, longitud) VALUES ('Blanco y violeta','veterinaria especializada en la atencion de caninos funciona las 24 hrs', '-29.921759', '-71.235805')");
-        }
-
     }
 
     @Override
