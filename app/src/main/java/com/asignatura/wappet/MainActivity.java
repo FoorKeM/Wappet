@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "                Desarrollado por                                         Felipe Zepeda - Sebastian Araya - Juan Garcia", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.veterinarias, R.id.mascotaextraviada, R.id.adoptar2, R.id.mapsFragment, R.id.registrar2)
+                R.id.nav_home, R.id.veterinarias, R.id.mascotaextraviada, R.id.adoptar2, R.id.mapsFragment, R.id.registrar2, R.id.fragment_mascota_extraviada, R.id.fragment_mascota_veterinario)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
