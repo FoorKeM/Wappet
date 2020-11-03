@@ -49,20 +49,38 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:text="TextView"
-                    android:textSize="18sp"  />
+                    android:text="Nombre:"
+                    android:textSize="18sp" />
 
                 <TextView
-                    android:id="@+id/descripcion"
+                    android:id="@+id/sexo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Sexo:" />
 
                 <TextView
                     android:id="@+id/precio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Tipo:" />
+
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fecha:" />
+
+                <TextView
+                    android:id="@+id/contacto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contacto:" />
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:text="descripcion:" />
 
             </LinearLayout>
 
