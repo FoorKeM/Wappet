@@ -6,31 +6,28 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/house"
             android:title="@string/menu_home" />
-        <item
-            android:id="@+id/veterinarias"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Veterinarias" />
+
         <item
             android:id="@+id/mascotaextraviada"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/search"
             android:title="Mascota Extraviada" />
         <item
             android:id="@+id/adoptar2"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/veterinarian"
             android:title="Adoptar Mascota" />
         <item
             android:id="@+id/registrar2"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/tabla"
             android:title="Registrar Mascota" />
         <item
             android:id="@+id/editar"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Editar Publicacion" />
+            android:icon="@drawable/basura"
+            android:title="Eliminar Publicacion" />
         <item
             android:id="@+id/mapsFragment"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ubicacion"
             android:title="Mapa Veterinarias" />
     </group>
 </menu>
