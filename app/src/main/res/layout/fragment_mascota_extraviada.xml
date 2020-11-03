@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment_mascota_extraviada">
+    tools:context=".fragment_mascota_veterinario">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,13 +20,31 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textCodigo"
+                    android:id="@+id/textname"
                     android:layout_width="135dp"
                     android:layout_height="wrap_content"
                     android:text="Nombre Mascota" />
 
                 <EditText
                     android:id="@+id/editTextCodigo"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textsexo"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sexo" />
+
+                <EditText
+                    android:id="@+id/editTextsexo"
                     android:layout_width="272dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
@@ -62,7 +80,7 @@
                     android:id="@+id/textPersona"
                     android:layout_width="135dp"
                     android:layout_height="wrap_content"
-                    android:text="Dueño Mascota" />
+                    android:text="Tipo de Mascota" />
 
                 <EditText
                     android:id="@+id/editTextPersona"
@@ -81,7 +99,7 @@
                     android:id="@+id/textProyecto"
                     android:layout_width="135dp"
                     android:layout_height="wrap_content"
-                    android:text="Tipo de Mascota" />
+                    android:text="Correo" />
 
                 <EditText
                     android:id="@+id/editTextProyecto"

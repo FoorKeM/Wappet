@@ -1,14 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragment_mascota_veterinario">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="393dp">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/NombreMascota"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Mascota" />
+
+                <EditText
+                    android:id="@+id/editTextNombre"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textsexo"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Sexo" />
+
+                <EditText
+                    android:id="@+id/editTextsexo"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textaño"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Año de Nacimiento" />
+
+                <EditText
+                    android:id="@+id/editTextCodigo"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/texttamaño"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tamaño" />
+
+                <EditText
+                    android:id="@+id/editTextDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="date" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textPersona"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tipo de Mascota" />
+
+                <EditText
+                    android:id="@+id/editTextPersona"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textProyecto"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Correo" />
+
+                <EditText
+                    android:id="@+id/editTextProyecto"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textSuma"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contacto" />
+
+                <EditText
+                    android:id="@+id/editTextSuma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:hint="0"
+                    android:inputType="number"
+                    android:text="+569" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp">
+
+                <TextView
+                    android:id="@+id/textDetalle"
+                    android:layout_width="135dp"
+                    android:layout_height="wrap_content"
+                    android:text="Descripcion Mascota" />
+
+                <EditText
+                    android:id="@+id/editTextDetalle"
+                    android:layout_width="272dp"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="151dp"
+        android:layout_marginBottom="-418dp"
+        android:text="Registrar" />
+
+</LinearLayout>
