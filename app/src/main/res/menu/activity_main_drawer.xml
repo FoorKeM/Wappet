@@ -30,4 +30,17 @@
             android:icon="@drawable/ubicacion"
             android:title="Mapa Veterinarias" />
     </group>
+    <item android:title="Comunidad">
+        <menu>
+            <item
+                android:id="@+id/facebook"
+                android:icon="@drawable/face"
+                android:title="Facebook" />
+
+            <item
+                android:id="@+id/Instagram"
+                android:icon="@drawable/insta"
+                android:title="Instagram" />
+        </menu>
+    </item>
 </menu>
