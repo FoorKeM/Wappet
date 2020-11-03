@@ -2,21 +2,24 @@ package com.asignatura.wappet;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
+
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.asignatura.wappet.ui.db.DbHelper;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -24,7 +27,13 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapsFragment extends Fragment {
+
+    DbHelper db;
+    private GoogleMap mMap;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -40,6 +49,62 @@ public class MapsFragment extends Fragment {
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
+            mMap = googleMap;
+
+            /*DbHelper db = new DbHelper(getContext());
+            Cursor c = db.ViewData();
+            String []nombre = new String[3];
+            String []descripcion = new String[3];
+            double []latitud = new double[3];
+            double []longitud= new double[3];
+
+            if(c.moveToFirst()){
+                for(int i=0;i<3;i++){
+                    nombre[i]=c.getString(c.getColumnIndex("nombre"));
+                    descripcion[i]=c.getString(c.getColumnIndex("descripcion"));
+                    latitud[i]=Double.parseDouble(c.getString(c.getColumnIndex("latitud")));
+                    longitud[i]=Double.parseDouble(c.getString(c.getColumnIndex("longitud")));
+
+                    c.moveToNext();
+                }
+            }
+
+            for(int j=0;j<3;j++){
+                LatLng latLng = new LatLng(latitud[j], longitud[j]);
+                MarkerOptions markerOptions = new MarkerOptions();
+                markerOptions.position(latLng);
+                markerOptions.title(nombre[j]);
+                mMap.addMarker(markerOptions);
+                mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
+                markerOptions.draggable(true);
+            } */
+
+            //ArrayList<String> arraylist = db.ViewData();
+
+            LatLng vet1 = new LatLng(-29.921759, -71.235805);
+            mMap.addMarker(new MarkerOptions().position(vet1).title("Blanco y violeta")
+                    .snippet("Dirección: Eduardo de la barra #660, La Serena, Coquimbo" +
+                            "Horario: Lunes a Viernes 10:00 - 23:00"+
+                            "Telefono: 9 8383 7766"));
+
+            LatLng vet2 = new LatLng(-29.904477, -71.251779);
+            mMap.addMarker(new MarkerOptions().position(vet2).title("Mundo Animal")
+                    .snippet("Dirección: Av Guillermo Ulriksen 1693, La Serena, Coquimbo" +
+                            "Horario: Lunes a Viernes 10:00 - 23:00"+
+                            "Telefono: 9 3168 6065"));
+
+            LatLng vet3 = new LatLng(-29.912675, -71.254872);
+            mMap.addMarker(new MarkerOptions().position(vet3).title("SilvaVet")
+                    .snippet("Dirección: Gómez Carreño #324, La Serena, Coquimbo" +
+                            "Horario: Lunes a Viernes 09:00 - 23:00"+
+                            "Telefono: 51 221 2389"));
+
+            LatLng vet4 = new LatLng(-29.914944, -71.251176);
+            mMap.addMarker(new MarkerOptions().position(vet4).title("Centro Médico Veterinario La Serena")
+                    .snippet("Dirección: Thomas Alba Edison 1530, La Serena, Coquimbo" +
+                            "Horario: Lunes a Viernes 08:00 - 21:00"+
+                            "Telefono: 51 263 5630"));
+
             LatLng city = new LatLng(-29.9045300,-71.2489400);
             //googleMap.moveCamera(CameraUpdateFactory.newLatLng(city));
             float zoomLevel = 16.0f; //This goes up to 21
