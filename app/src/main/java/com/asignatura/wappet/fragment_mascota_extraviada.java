@@ -2,22 +2,18 @@ package com.asignatura.wappet;
 
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link registrar#newInstance} factory method to
+ * Use the {@link fragment_mascota_extraviada#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class registrar extends Fragment {
+public class fragment_mascota_extraviada extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,7 +24,7 @@ public class registrar extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public registrar() {
+    public fragment_mascota_extraviada() {
         // Required empty public constructor
     }
 
@@ -38,11 +34,11 @@ public class registrar extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment registrar.
+     * @return A new instance of fragment fragment_mascota_extraviada.
      */
     // TODO: Rename and change types and number of parameters
-    public static registrar newInstance(String param1, String param2) {
-        registrar fragment = new registrar();
+    public static fragment_mascota_extraviada newInstance(String param1, String param2) {
+        fragment_mascota_extraviada fragment = new fragment_mascota_extraviada();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -63,27 +59,6 @@ public class registrar extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_registrar, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        Button btn1=view.findViewById(R.id.button3);
-        Button btn2=view.findViewById(R.id.button4);
-
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.fragment_mascota_veterinario);
-            }
-        });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.fragment_mascota_extraviada);
-            }
-        });
-
+        return inflater.inflate(R.layout.fragment_mascota_extraviada, container, false);
     }
 }
