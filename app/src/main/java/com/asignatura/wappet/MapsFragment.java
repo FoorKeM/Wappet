@@ -40,7 +40,6 @@ public class MapsFragment extends Fragment {
 
         @Override
         public void onMapReady(GoogleMap googleMap) {
-
             LatLng city = new LatLng(-29.9045300,-71.2489400);
             //googleMap.moveCamera(CameraUpdateFactory.newLatLng(city));
             float zoomLevel = 16.0f; //This goes up to 21
