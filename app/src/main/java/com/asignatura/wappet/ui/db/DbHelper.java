@@ -7,10 +7,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.google.android.material.tabs.TabLayout;
-
 import java.util.ArrayList;
-import java.util.List;
+
 
 public class DbHelper extends SQLiteOpenHelper {
 
@@ -24,7 +22,9 @@ public class DbHelper extends SQLiteOpenHelper {
     private static String LONGITUD = "longitud";
 
     private static String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "("
-            + ID + "INTEGER PRIMARY KEY AUTOINCREMENT," + NOMBRE + " TEXT," + DESCRIPCION + " TEXT," + LATITUD + " TEXT," + LONGITUD + " TEXT)";
+            + ID + "INTEGER PRIMARY KEY AUTOINCREMENT," + NOMBRE + " TEXT," + DESCRIPCION + " TEXT," + LATITUD + " REAL," + LONGITUD + " REAL)";
+
+    private static String INSERT_MARKER = "INSERT INTO " + TABLE_NAME + "("+ID+"," +NOMBRE+ "," + DESCRIPCION+ "," + LATITUD+ "," + LONGITUD+") VALUES (1, 'Blanco y violeta', 'veterinaria especializada en la atencion de caninos funciona las 24 hrs de lunes a domingo, excepto festivos','-29.921759','-71.235805')";
 
     public DbHelper(Context context) { super(context,DATABASE_NAME, null, DB_VERSION);}
 
@@ -32,8 +32,8 @@ public class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("DELETE FROM "+ TABLE_NAME);
         db.execSQL(CREATE_TABLE);
-
-        db = this.getWritableDatabase();
+        db.execSQL(INSERT_MARKER);
+        /*db = this.getWritableDatabase();
 
         String query = "SELECT * FROM veterinarias";
         db.rawQuery(query, null);
@@ -62,7 +62,7 @@ public class DbHelper extends SQLiteOpenHelper {
         values.put("longitud", "-71.254872");
 
         db.insert(TABLE_NAME, null, values);
-        db.close();
+        db.close();*/
     }
 
     @Override
@@ -71,31 +71,15 @@ public class DbHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-   public Cursor ViewData() {
+    public ArrayList getAll(){
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME, null);
-
-        return cursor;
-    }
-
-   /** public ArrayList<String> ViewData()
-    {
-        ArrayList<String> arraylist = new ArrayList<String>();
-        SQLiteDatabase sql=this.getReadableDatabase();
-
-        String query = "SELECT * FROM "+TABLE_NAME;
-
-        Cursor c = sql.rawQuery(query, null);
-        c.moveToFirst();
-        while(c.isAfterLast() == false) {
-            arraylist.add(c.getString(1));
-            arraylist.add(c.getString(2));
-            arraylist.add(c.getString(3));
-            arraylist.add(c.getString(4));
-            c.moveToNext();
+        ArrayList<String> array_list = new ArrayList<String>();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+ TABLE_NAME, null);
+        cursor.moveToFirst();
+        while(cursor.isAfterLast() == false){
+            array_list.add(cursor.getString(cursor.getColumnIndex("id")));
+            cursor.moveToNext();
         }
-
-        c.close();
-        return arraylist;
-    } */
+        return array_list;
+    }
 }
