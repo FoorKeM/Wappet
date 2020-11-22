@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "517588070164",
+    "firebase_url": "https://wappets-33ddd.firebaseio.com",
+    "project_id": "wappets-33ddd",
+    "storage_bucket": "wappets-33ddd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517588070164:android:1f199ec4095b1353ab5c01",
+        "android_client_info": {
+          "package_name": "com.asignatura.wappet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517588070164-i0lvoi5qf9432o2mh2l1o0c77t8rgvck.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asignatura.wappet",
+            "certificate_hash": "4a4120b045cc979896300f57692de977bf156fb3"
+          }
+        },
+        {
+          "client_id": "517588070164-vkp43s7abo8r8s3mqtjmacr5fboq6ud9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo2AbsX8a7m4hwv-h46ZFNl1di1OB883A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517588070164-vkp43s7abo8r8s3mqtjmacr5fboq6ud9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
