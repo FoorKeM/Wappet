@@ -25,6 +25,7 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
@@ -32,8 +33,8 @@ import java.util.List;
 
 public class MapsFragment extends Fragment {
 
-    DbHelper db;
     private GoogleMap mMap;
+    private DbHelper db;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -50,15 +51,10 @@ public class MapsFragment extends Fragment {
         @Override
         public void onMapReady(GoogleMap googleMap) {
             mMap = googleMap;
+            ArrayList<Marker>marker = db.getAll();
 
-            /*DbHelper db = new DbHelper(getContext());
-            Cursor c = db.ViewData();
-            String []nombre = new String[3];
-            String []descripcion = new String[3];
-            double []latitud = new double[3];
-            double []longitud= new double[3];
 
-            if(c.moveToFirst()){
+            /*if(c.moveToFirst()){
                 for(int i=0;i<3;i++){
                     nombre[i]=c.getString(c.getColumnIndex("nombre"));
                     descripcion[i]=c.getString(c.getColumnIndex("descripcion"));
@@ -68,18 +64,6 @@ public class MapsFragment extends Fragment {
                     c.moveToNext();
                 }
             }
-
-            for(int j=0;j<3;j++){
-                LatLng latLng = new LatLng(latitud[j], longitud[j]);
-                MarkerOptions markerOptions = new MarkerOptions();
-                markerOptions.position(latLng);
-                markerOptions.title(nombre[j]);
-                mMap.addMarker(markerOptions);
-                mMap.animateCamera(CameraUpdateFactory.newLatLng(latLng));
-                markerOptions.draggable(true);
-            } */
-
-            //ArrayList<String> arraylist = db.ViewData();
 
             LatLng vet1 = new LatLng(-29.921759, -71.235805);
             mMap.addMarker(new MarkerOptions().position(vet1).title("Blanco y violeta")
@@ -103,7 +87,7 @@ public class MapsFragment extends Fragment {
             mMap.addMarker(new MarkerOptions().position(vet4).title("Centro Médico Veterinario La Serena")
                     .snippet("Dirección: Thomas Alba Edison 1530, La Serena, Coquimbo" +
                             "Horario: Lunes a Viernes 08:00 - 21:00"+
-                            "Telefono: 51 263 5630"));
+                            "Telefono: 51 263 5630")); */
 
             LatLng city = new LatLng(-29.9045300,-71.2489400);
             //googleMap.moveCamera(CameraUpdateFactory.newLatLng(city));
