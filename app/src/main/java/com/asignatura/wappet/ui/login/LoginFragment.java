@@ -26,7 +26,6 @@ import com.asignatura.wappet.R;
 
 public class LoginFragment extends Fragment {
 
-    private LoginViewModel loginViewModel;
 
     @Nullable
     @Override
@@ -39,8 +38,7 @@ public class LoginFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
-                .get(LoginViewModel.class);
+
         Button btn1=view.findViewById(R.id.login);
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -49,22 +47,14 @@ public class LoginFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.nav_home);
             }
         });
-    }
 
-    private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
-        // TODO : initiate successful logged in experience
-        if (getContext() != null && getContext().getApplicationContext() != null) {
-            Toast.makeText(getContext().getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
-        }
-    }
+       Button btn2=view.findViewById(R.id.buttonRegistrarse);
 
-    private void showLoginFailed(@StringRes Integer errorString) {
-        if (getContext() != null && getContext().getApplicationContext() != null) {
-            Toast.makeText(
-                    getContext().getApplicationContext(),
-                    errorString,
-                    Toast.LENGTH_LONG).show();
-        }
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.registrar_usuario2);
+            }
+        });
     }
 }
