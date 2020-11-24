@@ -41,8 +41,8 @@
             android:id="@+id/action_registrar2_to_fragment_mascota_extraviada"
             app:destination="@id/fragment_mascota_extraviada" />
         <action
-            android:id="@+id/action_registrar2_to_fragment_mascota_veterinario"
-            app:destination="@id/fragment_mascota_veterinario" />
+            android:id="@+id/action_registrar2_to_fragment_mascota_adopcion"
+            app:destination="@id/fragment_mascota_adopcion" />
     </fragment>
     <fragment
         android:id="@+id/fragment_mascota_extraviada"
@@ -78,4 +78,9 @@
             android:id="@+id/action_loginFragment_to_nav_home2"
             app:destination="@id/nav_home" />
     </fragment>
+    <fragment
+        android:id="@+id/fragment_mascota_adopcion"
+        android:name="com.asignatura.wappet.fragment_mascota_adopcion"
+        android:label="Registrar Adopcion"
+        tools:layout="@layout/fragment_mascota_adopcion" />
 </navigation>

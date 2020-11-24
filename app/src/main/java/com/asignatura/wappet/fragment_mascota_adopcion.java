@@ -18,10 +18,10 @@ import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link fragment_mascota_veterinario#newInstance} factory method to
+ * Use the {@link fragment_mascota_adopcion#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class fragment_mascota_veterinario extends Fragment {
+public class fragment_mascota_adopcion extends Fragment {
 
     EditText nombrep, sexop, añop, tipop, tamañop, correop, contactop, descripcionp;
     FirebaseDatabase firebaseDatabase;
@@ -37,7 +37,7 @@ public class fragment_mascota_veterinario extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public fragment_mascota_veterinario() {
+    public fragment_mascota_adopcion() {
         // Required empty public constructor
     }
 
@@ -47,11 +47,11 @@ public class fragment_mascota_veterinario extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment fragment_mascota_veterinario.
+     * @return A new instance of fragment fragment_mascota_adopcion.
      */
     // TODO: Rename and change types and number of parameters
-    public static fragment_mascota_veterinario newInstance(String param1, String param2) {
-        fragment_mascota_veterinario fragment = new fragment_mascota_veterinario();
+    public static fragment_mascota_adopcion newInstance(String param1, String param2) {
+        fragment_mascota_adopcion fragment = new fragment_mascota_adopcion();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -71,7 +71,7 @@ public class fragment_mascota_veterinario extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View vista= inflater.inflate(R.layout.fragment_mascota_veterinario, container, false);
+        View vista= inflater.inflate(R.layout.fragment_mascota_adopcion, container, false);
 
         buttonsubir = (Button) vista.findViewById(R.id.btn1);
 

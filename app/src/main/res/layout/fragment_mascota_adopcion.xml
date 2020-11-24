@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment_mascota_veterinario">
+    tools:context=".fragment_mascota_adopcion">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="393dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -170,8 +170,6 @@
                     android:inputType="textPersonName"
                     android:text="" />
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
 
