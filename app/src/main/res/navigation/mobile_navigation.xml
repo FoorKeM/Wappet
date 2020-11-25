@@ -72,28 +72,30 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.asignatura.wappet.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_nav_home2"
             app:destination="@id/nav_home" />
         <action
-            android:id="@+id/action_loginFragment_to_registrar_usuario2"
-            app:destination="@id/registrar_usuario2" />
+            android:id="@+id/action_loginFragment_to_fragment_registrar_usuario"
+            app:destination="@id/fragment_registrar_usuario" />
     </fragment>
     <fragment
         android:id="@+id/fragment_mascota_adopcion"
         android:name="com.asignatura.wappet.fragment_mascota_adopcion"
         android:label="Registrar Adopcion"
         tools:layout="@layout/fragment_mascota_adopcion" />
-    <fragment
-        android:id="@+id/registrar_usuario"
-        android:name="com.asignatura.wappet.registrar_usuario"
-        android:label="fragment_registrar_usuario"
-        tools:layout="@layout/fragment_registrar_usuario" />
+
     <fragment
         android:id="@+id/registrar_usuario2"
         android:name="com.asignatura.wappet.registrar_usuario2"
-        android:label="fragment_registrar_usuario2"
+        android:label="Registrarse"
         tools:layout="@layout/fragment_registrar_usuario2" />
+    <fragment
+        android:id="@+id/fragment_registrar_usuario"
+        android:name="com.asignatura.wappet.fragment_registrar_usuario"
+        android:label="Registrarse"
+        tools:layout="@layout/fragment_registrar_usuario3" />
+
 </navigation>
