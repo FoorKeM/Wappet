@@ -97,5 +97,10 @@
         android:name="com.asignatura.wappet.fragment_registrar_usuario"
         android:label="Registrarse"
         tools:layout="@layout/fragment_registrar_usuario3" />
+    <fragment
+        android:id="@+id/fragment_view_mascota"
+        android:name="com.asignatura.wappet.fragment_view_mascota"
+        android:label="fragment_view_mascota"
+        tools:layout="@layout/fragment_view_mascota" />
 
 </navigation>

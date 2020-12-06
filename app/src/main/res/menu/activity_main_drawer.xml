@@ -10,7 +10,7 @@
             android:title="Inicio" />
 
         <item
-            android:id="@+id/fragment_mostrar_mascota"
+            android:id="@+id/fragment_view_mascota"
             android:icon="@drawable/search"
             android:title="Mascota Extraviada" />
         <item
