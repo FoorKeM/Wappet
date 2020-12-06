@@ -6,8 +6,12 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,7 +31,8 @@ import java.util.List;
 public class MapsFragment extends Fragment{
 
     private GoogleMap mMap;
-    private DbHelper db;
+    private DbHelper helper;
+    private SQLiteDatabase db;
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
 
@@ -47,7 +52,26 @@ public class MapsFragment extends Fragment{
 
             mMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(getActivity().getApplicationContext()));
 
-            LatLng vet1 = new LatLng(-29.921759, -71.235805);
+            helper = new DbHelper(getActivity());
+            Cursor cursor = helper.alldata();
+
+            if (cursor.moveToFirst()) {
+                //Log.e("TAG",cursor.getString(0));
+                if (cursor.moveToFirst()) {
+                    //Recorremos el cursor hasta que no haya más registros
+                    do {
+                        String nombre = cursor.getString(1);
+                        String descripcion = cursor.getString(2);
+                        double latitud = cursor.getDouble(3);
+                        double longitud = cursor.getDouble(4);
+
+                        LatLng aux = new LatLng(latitud, longitud);
+                        mMap.addMarker(new MarkerOptions().position(aux).title(nombre).snippet(descripcion));
+                    } while(cursor.moveToNext());
+                }
+            }
+
+            /*LatLng vet1 = new LatLng(-29.921759, -71.235805);
             mMap.addMarker(new MarkerOptions().position(vet1).title("Blanco y violeta")
                     .snippet("Dirección: Eduardo de la barra #660, La Serena, Coquimbo" +"\n" +
                             "Horario: Lunes a Viernes 10:00 - 23:00"+ "\n" +
@@ -69,7 +93,7 @@ public class MapsFragment extends Fragment{
             mMap.addMarker(new MarkerOptions().position(vet4).title("Centro Médico Veterinario La Serena")
                     .snippet("Dirección: Thomas Alba Edison 1530, La Serena, Coquimbo" +"\n" +
                             "Horario: Lunes a Viernes 08:00 - 21:00"+"\n" +
-                            "Telefono: 51 263 5630"));
+                            "Telefono: 51 263 5630"));*/
 
             LatLng city = new LatLng(-29.9045300,-71.2489400);
             float zoomLevel = 16.0f; //This goes up to 21
