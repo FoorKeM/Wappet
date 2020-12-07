@@ -28,6 +28,10 @@ public class AdaptadorMascotasE extends FirebaseRecyclerAdapter<ElementMascota,A
         holder.txtName.setText(model.getNombre());
         holder.txtTipo.setText(model.getTipo());
         holder.txtSexo.setText(model.getSexo());
+        holder.txtcontacto.setText(model.getContacto());
+        holder.txtcorreo.setText(model.getCorreo());
+        holder.txtfecha.setText(model.getFecha());
+        holder.txtdescripcion.setText(model.getDescripcion());
     }
 
     @NonNull
@@ -39,13 +43,17 @@ public class AdaptadorMascotasE extends FirebaseRecyclerAdapter<ElementMascota,A
 
     public class myviewholder extends RecyclerView.ViewHolder
     {
-        TextView txtName, txtTipo, txtSexo;
+        TextView txtName, txtTipo, txtSexo, txtcontacto, txtcorreo, txtfecha, txtdescripcion;
 
         public myviewholder(@NonNull View itemView){
             super(itemView);
             txtName=itemView.findViewById(R.id.txtname);
             txtTipo=itemView.findViewById(R.id.txttipo);
             txtSexo=itemView.findViewById(R.id.txtsexo);
+            txtcontacto=itemView.findViewById(R.id.txtcontacto);
+            txtcorreo=itemView.findViewById(R.id.txtcorreo);
+            txtfecha=itemView.findViewById(R.id.txtfecha);
+            txtdescripcion=itemView.findViewById(R.id.txtdescripcion);
         }
     }
 }
