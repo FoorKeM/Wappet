@@ -2,17 +2,11 @@ package com.asignatura.wappet;
 
 import java.io.Serializable;
 
-public class ElementMascota implements Serializable {
-    private String nombre, sexo, contacto, correo, descripcion, fecha, tipo;
+public class ElementMascota {
+    String nombre, sexo, contacto, correo, descripcion, fecha, tipo;
 
-    public ElementMascota(String nombre, String sexo, String contacto, String correo, String descripcion, String fecha, String tipo) {
-        this.nombre = nombre;
-        this.sexo = sexo;
-        this.contacto = contacto;
-        this.correo = correo;
-        this.descripcion = descripcion;
-        this.fecha = fecha;
-        this.tipo = tipo;
+    public ElementMascota(){
+
     }
 
     public String getNombre() {
