@@ -14,7 +14,7 @@
             android:icon="@drawable/search"
             android:title="Mascota Extraviada" />
         <item
-            android:id="@+id/adoptar2"
+            android:id="@+id/fragment_view_adopcion"
             android:icon="@drawable/veterinarian"
             android:title="Adoptar Mascota" />
         <item

@@ -100,7 +100,12 @@
     <fragment
         android:id="@+id/fragment_view_mascota"
         android:name="com.asignatura.wappet.fragment_view_mascota"
-        android:label="fragment_view_mascota"
+        android:label="Mascotas Extraviadas"
         tools:layout="@layout/fragment_view_mascota" />
+    <fragment
+        android:id="@+id/fragment_view_adopcion"
+        android:name="com.asignatura.wappet.fragment_view_adopcion"
+        android:label="Mascotas en Adopcion"
+        tools:layout="@layout/fragment_view_adopcion" />
 
 </navigation>

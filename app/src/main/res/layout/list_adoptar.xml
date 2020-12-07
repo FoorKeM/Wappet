@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="164dp"
+            android:layout_height="137dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/iconImageView"
+            android:layout_toRightOf="@id/iconImageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:hint="Nombre"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtsexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="sexo"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txttipo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tipo"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txttamaño"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="tamaño"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtcontacto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="contacto"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtcorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="correo"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtfecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="fecha"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtdescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="descripcion"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
